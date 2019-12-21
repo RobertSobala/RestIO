@@ -1,9 +1,12 @@
 package com.example.RestIO.db;
 
 import com.example.RestIO.Models.Student;
+import com.example.RestIO.db.repositories.ScoreRow;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.Set;
 
 @Entity
 public class StudentRow {
@@ -19,6 +22,16 @@ public class StudentRow {
         this.group = group;
     }
 
+    public Set<ScoreRow> getScores() {
+        return scores;
+    }
+
+    public void setScores(Set<ScoreRow> scores) {
+        this.scores = scores;
+    }
+
+    @OneToMany(mappedBy = "student")
+    private Set<ScoreRow> scores;
     public Student toStudent()
     {
         return new Student(

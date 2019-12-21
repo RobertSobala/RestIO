@@ -28,7 +28,7 @@ public class StudentServiceTest extends StudentService {
         //final StudentService studentService = new StudentService();
         //Assert.assertEquals(studentService.getStudents(), List.empty());
     }
-
+/*
 
     @Test
     public void addStudent()
@@ -55,4 +55,5 @@ public class StudentServiceTest extends StudentService {
         Student added2 = studentService.addStudent(new AddStudent("Student3","3","IPpp"));
         assertEquals(2,studentService.getStudents().size());
     }
+    */
 }
